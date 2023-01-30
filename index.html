@@ -7,24 +7,49 @@
     <title>Game</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
-    <h1>This is a simple version of memo-game</h1>
-    <h2>Try to find all pair of numbers</h2>
-    <button id="btn0" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn1" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn2" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn3" class="btn_closed" onclick="funClick(this)">*</button>
-    <br>
-    <button id="btn4" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn5" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn6" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn7" class="btn_closed" onclick="funClick(this)">*</button>
-    <br>
-    <button id="btn8" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn9" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn10" class="btn_closed" onclick="funClick(this)">*</button>
-    <button id="btn11" class="btn_closed" onclick="funClick(this)">*</button>
-    <br>
+<body class="green-theme">
+    <table id="mainTable"><tr><td align="center">
+        <h1>Welcome to Memo-Game</h1>
+        <h2>Try to find all pair of numbers</h2>
+        <select id="selectDificulty">
+            <option value="0">Select game dificulty</option>
+            <option value="16">4x4</option>
+            <option value="36">6x6</option>
+            <option value="64">8x8</option>
+        </select>
+        <br>
+        <input type="checkbox" name="" id="useTimer"> <label for="useTimer">use timer</label>
+        <br>
+        <button class="btn" id="playBtn">Play</button>
+        <br><br>
+        <label for="">Click Play for start the Game</label>
+        <br><br>
+        <button id="btn0" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn1" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn2" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn3" class="btn_closed" onclick="funClick(this)">*</button>
+        <br>
+        <button id="btn4" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn5" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn6" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn7" class="btn_closed" onclick="funClick(this)">*</button>
+        <br>
+        <button id="btn8" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn9" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn10" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn11" class="btn_closed" onclick="funClick(this)">*</button>
+        <br>
+        <button id="btn12" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn13" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn14" class="btn_closed" onclick="funClick(this)">*</button>
+        <button id="btn15" class="btn_closed" onclick="funClick(this)">*</button>
+        <br><br>
+        <button class="btn" onclick="switchTheme(this)" id="greenBtn" value="green-theme">Green theme</button>
+        <button class="btn" onclick="switchTheme(this)" id="blueBtn" value="blue-theme">Blue theme</button>
+        <button class="btn" onclick="switchTheme(this)" id="redBtn" value="red-theme">Red theme</button>
+        <button class="btn" onclick="switchTheme(this)" id="yellowBtn" value="yellow-theme">Yellow theme</button>
+        <br>
+    </td></tr></table>
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site</noscript>
 </body>

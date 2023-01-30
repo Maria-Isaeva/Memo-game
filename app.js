@@ -1,7 +1,7 @@
 'use strict';
 
 window.onload = function(){
-    var numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
+    var numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
     let numLen = numbers.length;
     for (let i = 0; i <numLen; i++) {
         let currLen = numbers.length;
@@ -23,7 +23,6 @@ function funClick(e) {
     e.className = 'btn_open';
     e.innerText = e.value;
     e.setAttribute('onclick','');
-    //e.onclick = "";
 
     openBtn.push(e.id);
     console.log ('cnt open : ' + openBtn.length);
@@ -59,3 +58,7 @@ function funClick(e) {
         }
     }
 };
+
+function switchTheme(e) {
+    document.body.className = e.value;
+}
