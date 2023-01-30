@@ -1,26 +1,109 @@
+:root {
+    --fontGreenColor: green;
+    --backGreenColor: lightgreen;
+    --fontBlueColor: blue;
+    --backBlueColor: aqua;
+    --fontRedColor: brown;
+    --backRedColor: lightcoral;
+    --fontYellowColor: orange;
+    --backYellowColor: bisque;
+}
+
+.green-theme {
+    --fontColor: var(--fontGreenColor);
+    --backColor: var(--backGreenColor);
+}
+
+.blue-theme {
+    --fontColor: var(--fontBlueColor);
+    --backColor: var(--backBlueColor);
+}
+
+.red-theme {
+    --fontColor: var(--fontRedColor);
+    --backColor: var(--backRedColor);
+}
+
+.yellow-theme {
+    --fontColor: var(--fontYellowColor);
+    --backColor: var(--backYellowColor);
+}
+
+button {
+    border-style: double;
+    border-radius: 20%;
+    font-size: large;
+}
+
+.btn:hover {
+    border-style: dashed;
+}
+
+#playBtn {
+    color: var(--fontColor);
+    border-color: var(--fontColor);
+    background-color: var(--backColor);
+}
+
+#greenBtn {
+    color: var(--fontGreenColor);
+    border-color: var(--fontGreenColor);
+    background-color: var(--backGreenColor);
+}
+
+#blueBtn {
+    color: var(--fontBlueColor);
+    border-color: var(--fontBlueColor);
+    background-color: var(--backBlueColor);
+}
+
+#redBtn {
+    color: var(--fontRedColor);
+    border-color: var(--fontRedColor);
+    background-color: var(--backRedColor);
+}
+
+#yellowBtn {
+    color: var(--fontYellowColor);
+    border-color: var(--fontYellowColor);
+    background-color: var(--backYellowColor);
+}
+
+#mainTable {
+    width: 100%;
+    align-content: center;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--fontColor);
+    border-radius: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--backColor);
+    color: var(--fontColor);
+}
+
 .btn_closed {
     width: 40px;
     height: 40px;
-        
+}
+
+.btn_closed:hover {
+    background-color: darkgray;
 }
 
 .btn_open {
     width: 40px;
     height: 40px;
     background-color: yellow;
-    
 }
 
 .btn_matched {
     width: 40px;
     height: 40px;
-    background-color: lightgreen;
-    
+    background-color:lime;
 }
 
 .btn_wrong {
     width: 40px;
     height: 40px;
     background-color: red;
-    
 }
