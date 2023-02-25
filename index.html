@@ -13,36 +13,47 @@
         <h2>Try to find all pair of numbers</h2>
         <select id="selectDificulty">
             <option value="0">Select game dificulty</option>
-            <option value="16">4x4</option>
-            <option value="36">6x6</option>
-            <option value="64">8x8</option>
+            <option value="4">4x4</option>
+            <option value="6">6x6</option>
+            <option value="8">8x8</option>
         </select>
         <br>
-        <input type="checkbox" name="" id="useTimer"> <label for="useTimer">use timer</label>
-        <br>
-        <button class="btn" id="playBtn">Play</button>
+        <input type="checkbox" id="useTimer"> <label for="useTimer">timer</label><br>
+        <input type="checkbox" id="useAttempts"> <label for="useAttempts">limited attempts</label><br>
+        <button class="btn" id="playBtn" onclick="startGame()">Play</button>
         <br><br>
-        <label for="">Click Play for start the Game</label>
+        <label>Select game options and click Play for start the Game</label>
         <br><br>
-        <button id="btn0" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn1" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn2" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn3" class="btn_closed" onclick="funClick(this)">*</button>
-        <br>
-        <button id="btn4" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn5" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn6" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn7" class="btn_closed" onclick="funClick(this)">*</button>
-        <br>
-        <button id="btn8" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn9" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn10" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn11" class="btn_closed" onclick="funClick(this)">*</button>
-        <br>
-        <button id="btn12" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn13" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn14" class="btn_closed" onclick="funClick(this)">*</button>
-        <button id="btn15" class="btn_closed" onclick="funClick(this)">*</button>
+        <label id="test">info</label>
+        <br><br>
+        
+        <table id="game-field">
+        <tr>
+            <td><button id="btn0" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn1" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn2" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn3" class="btn_closed" onclick="funClick(this)">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn4" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn5" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn6" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn7" class="btn_closed" onclick="funClick(this)">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn8" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn9" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn10" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn11" class="btn_closed" onclick="funClick(this)">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn12" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn13" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn14" class="btn_closed" onclick="funClick(this)">*</button></td>
+            <td><button id="btn15" class="btn_closed" onclick="funClick(this)">*</button></td>
+        </tr>
+        </table>
+        
         <br><br>
         <button class="btn" onclick="switchTheme(this)" id="greenBtn" value="green-theme">Green theme</button>
         <button class="btn" onclick="switchTheme(this)" id="blueBtn" value="blue-theme">Blue theme</button>

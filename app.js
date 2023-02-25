@@ -62,3 +62,35 @@ function funClick(e) {
 function switchTheme(e) {
     document.body.className = e.value;
 }
+
+function startGame() {
+    let dimTable = document.getElementById("selectDificulty").value; 
+    let cntBtns = dimTable*dimTable;
+    
+    //create array of numbers
+    let numbers = [];
+    for (let i = 0; i < cntBtns; i++) {
+        numbers[i] = Math.floor(i/2) + 1;
+    }
+    
+    //create game field
+    let gameTable = "";
+    for (let i = 0; i < dimTable; i++) {
+        gameTable += "<tr>"
+        for (let j = 0; j < dimTable; j++) {
+            let numberBtn = i*dimTable + j;
+            gameTable += '<td><button id="btn' + numberBtn + '" class="btn_closed" onclick="funClick(this)">*</button></td>'
+        }
+        gameTable += "</tr>"
+    }
+    document.getElementById("game-field").innerHTML = gameTable;
+    
+    // assign values to buttons
+    for (let i = 0; i < cntBtns; i++) {
+        let currLen = numbers.length;
+        let randomItem = Math.floor(Math.random()*numbers.length)
+        let idBtn = 'btn'+i; 
+        document.getElementById(idBtn).value = numbers[randomItem];
+        numbers.splice(randomItem, 1);
+    }
+}
